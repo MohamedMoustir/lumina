@@ -28,9 +28,10 @@ const menu = [
   },
 ]
 
-const logo = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.21.20%20%281%29-7jJ3cnx8odveSMP4IjmowtOq100dJM.jpeg'
+const logo = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_8e18di8e18di8e18-luNJSlHrQNoUadBxFLslqeOnHHjwg6.jpg'
 const brandBoard = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.19.33-MhIAHaDiLx9KA1FBKrhbc6cVB6EuiB.jpeg'
-const whatsapp = 'https://wa.me/212779852692'
+const whatsapp = 'https://wa.me/message/VHSIHGG4RB73D1'
+const instagram = 'https://instagram.com/moo_dybites?utm_source=qr&xtok=bWFweG5oaml5eWdy'
 
 export function MoodyLanding() {
   return (
@@ -49,7 +50,7 @@ export function MoodyLanding() {
           <div className="hero-note"><span className="note-rule" />Des desserts faits pour partager<span className="tiny-heart">♡</span></div>
         </div>
         <div className="hero-art">
-          <div className="hero-image-frame"><Image src={logo} alt="Logo Moody, adorable cake couronné sur fond rose" fill priority sizes="(max-width: 760px) 90vw, 48vw" /></div>
+          <div className="hero-image-frame"><Image src={logo} alt="Emblème Moody : gâteau couronné et lettrage Moody" fill priority sizes="(max-width: 760px) 90vw, 48vw" /></div>
           <span className="art-sticker">Préparé<br />avec amour <b>♡</b></span>
           <span className="art-caption">MOODY · MARRAKECH</span>
         </div>
@@ -75,7 +76,7 @@ export function MoodyLanding() {
       <section className="gallery-section"><div className="gallery-heading"><p className="eyebrow">UN APERÇU DE NOTRE UNIVERS</p><h2>Le bonheur, <em>en couches.</em></h2></div><div className="gallery-image"><Image src={brandBoard} alt="Moodboard Moody : desserts maison, emballages et univers de la pâtisserie" fill sizes="100vw" /></div><p className="gallery-caption">Du premier regard à la dernière bouchée. <span>Moody Pâtisserie · Marrakech</span></p></section>
 
       <section className="contact-section" id="contact"><div className="contact-top"><div><p className="eyebrow">ON GARDE UNE PLACE POUR VOUS</p><h2>Votre prochain<br /><em>coup de cœur.</em></h2></div><p>Une commande, une question ou juste une envie sucrée ?<br />On vous répond avec plaisir.</p></div><a className="contact-card" href={whatsapp} target="_blank" rel="noreferrer"><span className="contact-icon"><MessageCircle size={22} /></span><span className="contact-label">COMMANDES & RENSEIGNEMENTS<strong>0779-852692</strong></span><span className="contact-location"><MapPin size={18} /> Marrakech</span><ArrowUpRight className="contact-arrow" size={22} /></a><div className="closing-line">Small bites <span>♡</span> Big mood</div></section>
-      <footer className="site-footer"><a className="footer-brand" href="#top">moody<span> pâtisserie</span></a><p>De la douceur à chaque bouchée.</p><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={13} /></a><small>© {new Date().getFullYear()} Moody Pâtisserie · Marrakech</small></footer>
+      <footer className="site-footer"><a className="footer-brand" href="#top">moody<span> pâtisserie</span></a><p>De la douceur à chaque bouchée.</p><div className="footer-socials"><a href={instagram} target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a><a href={whatsapp} target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={13} /></a></div><small>© {new Date().getFullYear()} Moody Pâtisserie · Marrakech</small></footer>
     </main>
   )
 }
