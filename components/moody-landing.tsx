@@ -8,7 +8,7 @@ const menu = [
     description: 'Cake vanille, crème en goût fraise, coulis de fraise, partie croustillante et sauce chocolat.',
     ingredients: ['Cake vanille', 'Crème en goût fraise', 'Coulis de fraise', 'Partie croustillante', 'Sauce chocolat'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '35 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '45 DH' }],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.21.21%20%281%29-W4qaX9h4irMvTOa15IcRMRkl8qlwhI.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%281%29-ahJFredXVN4JSQfsooidam7WFFRhkZ.jpeg',
   },
   {
     name: 'Chocolat',
@@ -16,7 +16,7 @@ const menu = [
     description: 'Cake chocolat, crème vanille, sauce chocolat, partie croustillante et ganache chocolat noir.',
     ingredients: ['Cake chocolat', 'Crème vanille', 'Sauce chocolat', 'Partie croustillante', 'Ganache chocolat noir'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '35 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '45 DH' }],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.21.21%20%281%29-W4qaX9h4irMvTOa15IcRMRkl8qlwhI.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%282%29-k7oW95KeYbmhYOWfxFWY2nOiiRUYqQ.jpeg',
   },
   {
     name: 'Pistachio',
@@ -24,7 +24,30 @@ const menu = [
     description: 'Cake chocolat, crème pistachio, crème chocolat, sauce pistachio, croustillant et pistache.',
     ingredients: ['Cake chocolat', 'Crème pistachio', 'Crème chocolat', 'Sauce pistachio', 'Partie croustillante', 'Et pistach'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '40 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '50 DH' }],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.21.21%20%281%29-W4qaX9h4irMvTOa15IcRMRkl8qlwhI.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05-qAAsNQmdtM5OBvGYaqEiL8PukC0Lo5.jpeg',
+  },
+  {
+    name: 'Lotus',
+    tone: 'lotus',
+    description: 'Un tiramisu aux biscuits Lotus dans l’univers Moody.',
+    ingredients: ['Biscuit Lotus'],
+    prices: [],
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%283%29-IjHBowpsvDoxBOgP3C5mgy2it5iL5V.jpeg',
+  },
+]
+
+const tiramisus = [
+  {
+    name: 'Tiramisu Noisette',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%285%29-STPmtxtQd77rHzQfEefweRwYNzO9uo.jpeg',
+  },
+  {
+    name: 'Tiramisu Chocolat',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.06-mwQwe0EC0tbWq4QPCSYs8XnZ4UXwMm.jpeg',
+  },
+  {
+    name: 'Tiramisu Classique',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%284%29-OgKfr0waix9KpViS3CBI5Svp7EK2Rt.jpeg',
   },
 ]
 
@@ -66,10 +89,14 @@ export function MoodyLanding() {
         <div className="section-head"><div><p className="eyebrow">LA CARTE MOODY</p><h2>Choisissez votre <em>mood.</em></h2></div><p>Des couches de gourmandise<br />à savourer jusqu&apos;à la dernière cuillère.</p></div>
         <div className="menu-list">
           {menu.map((item, index) => <article className={`menu-card ${item.tone}`} key={item.name}>
-            <div className="menu-photo"><Image src={item.image} alt={`Canette dessert Moody ${item.name}`} fill sizes="(max-width: 760px) 90vw, 38vw" className="menu-photo-image" /><span className="photo-index">0{index + 1} / 03</span></div>
-            <div className="menu-info"><div className="menu-title-row"><span className="flavor-mark" aria-hidden="true">✳</span><h3>{item.name}</h3></div><p className="menu-description">{item.description}</p><div className="ingredients"><h4>Dans chaque pot</h4><ul>{item.ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}</ul></div><div className="prices">{item.prices.map((option) => <div className="price" key={option.size}><span>{option.size}</span><small>{option.detail}</small><strong>{option.price}</strong></div>)}</div></div>
+            <div className="menu-photo"><Image src={item.image} alt={`Canette dessert Moody ${item.name}`} fill sizes="(max-width: 760px) 90vw, 38vw" className="menu-photo-image" /><span className="photo-index">0{index + 1} / 0{menu.length}</span></div>
+            <div className="menu-info"><div className="menu-title-row"><span className="flavor-mark" aria-hidden="true">✳</span><h3>{item.name}</h3></div><p className="menu-description">{item.description}</p>{item.ingredients.length > 0 && <div className="ingredients"><h4>Dans chaque pot</h4><ul>{item.ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}</ul></div>}{item.prices.length > 0 && <div className="prices">{item.prices.map((option) => <div className="price" key={option.size}><span>{option.size}</span><small>{option.detail}</small><strong>{option.price}</strong></div>)}</div>}</div>
           </article>)}
         </div>
+        <section className="tiramisu-collection" aria-labelledby="tiramisu-title">
+          <div className="collection-heading"><div><p className="eyebrow">TIRAMISU & MORE</p><h3 id="tiramisu-title">À partager <em>ou pas.</em></h3></div><p>Nos tiramisus, chacun sa petite douceur.</p></div>
+          <div className="tiramisu-grid">{tiramisus.map((item) => <article className="tiramisu-card" key={item.name}><div className="tiramisu-photo"><Image src={item.image} alt={`${item.name} Moody, dessert en boîte`} fill sizes="(max-width: 760px) 45vw, 30vw" /></div><h4>{item.name}</h4></article>)}</div>
+        </section>
         <p className="menu-footnote">Une question sur la carte ? <a href={whatsapp} target="_blank" rel="noreferrer">Contactez-nous sur WhatsApp <ArrowUpRight size={13} /></a></p>
       </section>
 
