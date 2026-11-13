@@ -8,7 +8,7 @@ const menu = [
     description: 'Cake vanille, crème en goût fraise, coulis de fraise, partie croustillante et sauce chocolat.',
     ingredients: ['Cake vanille', 'Crème en goût fraise', 'Coulis de fraise', 'Partie croustillante', 'Sauce chocolat'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '35 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '45 DH' }],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%281%29-ahJFredXVN4JSQfsooidam7WFFRhkZ.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Strawberry%20Moody%20Patisserie%20Dessert%20Jar-ofVaqv0FU8s3w1EQp0BZe7mHgvWLvn.png',
   },
   {
     name: 'Chocolat',
@@ -32,7 +32,7 @@ const menu = [
     description: 'Un tiramisu aux biscuits Lotus dans l’univers Moody.',
     ingredients: ['Biscuit Lotus'],
     prices: [],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%283%29-IjHBowpsvDoxBOgP3C5mgy2it5iL5V.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2016.49.20-q4WHD76aa3G7lWheNVoyoA96GqJrNm.jpeg',
   },
 ]
 
@@ -55,7 +55,8 @@ const tiramisus = [
 ]
 
 const logo = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_8e18di8e18di8e18-luNJSlHrQNoUadBxFLslqeOnHHjwg6.jpg'
-const brandBoard = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.19.33-MhIAHaDiLx9KA1FBKrhbc6cVB6EuiB.jpeg'
+const brandBoard = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.19.33%20%281%29-jItqUSLEOwstXOEOp0PAWKH3XjQmcw.jpeg'
+const flavorPair = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Moody%20Chocolate%20and%20Pistachio%20Dessert%20Cans-EhXkAuQak4jurpGJb09xuX6PZlesk8.png'
 const whatsapp = 'https://wa.me/message/VHSIHGG4RB73D1'
 const instagram = 'https://instagram.com/moo_dybites?utm_source=qr&xtok=bWFweG5oaml5eWdy'
 
@@ -96,6 +97,7 @@ export function MoodyLanding() {
             <div className="menu-info"><div className="menu-title-row"><span className="flavor-mark" aria-hidden="true">✳</span><h3>{item.name}</h3></div><p className="menu-description">{item.description}</p>{item.ingredients.length > 0 && <div className="ingredients"><h4>Dans chaque pot</h4><ul>{item.ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}</ul></div>}{item.prices.length > 0 && <div className="prices">{item.prices.map((option) => <div className="price" key={option.size}><span>{option.size}</span><small>{option.detail}</small><strong>{option.price}</strong></div>)}</div>}</div>
           </article>)}
         </div>
+        <figure className="flavor-pair"><div className="flavor-pair-image"><Image src={flavorPair} alt="Canettes de dessert Moody au chocolat et à la pistache" fill sizes="(max-width: 760px) 100vw, 70vw" /></div><figcaption><span>DOUX DUO</span><strong>Chocolat & pistachio</strong><small>Deux canettes, deux moods à découvrir.</small></figcaption></figure>
         <section className="tiramisu-collection" aria-labelledby="tiramisu-title">
           <div className="collection-heading"><div><p className="eyebrow">TIRAMISU & MORE</p><h3 id="tiramisu-title">À partager <em>ou pas.</em></h3></div><p>Nos tiramisus, chacun sa petite douceur.</p></div>
           <div className="tiramisu-grid">{tiramisus.map((item) => <article className="tiramisu-card" key={item.name}><div className="tiramisu-photo"><Image src={item.image} alt={`${item.name} Moody, dessert en boîte`} fill sizes="(max-width: 760px) 45vw, 30vw" /></div><div className="tiramisu-card-footer"><h4>{item.name}</h4><strong className="tiramisu-price">{item.price}</strong></div></article>)}</div>
