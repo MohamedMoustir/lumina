@@ -5,6 +5,7 @@ const menu = [
   {
     name: 'Fraise',
     tone: 'berry',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp_Image_2026-11-14_at_17.04.09__1_-removebg-preview-7IVY0CgTInmkzhriL544fHiKB9yInf.png',
     description: 'Cake vanille, crème en goût fraise, coulis de fraise, partie croustillante et sauce chocolat.',
     ingredients: ['Cake vanille', 'Crème en goût fraise', 'Coulis de fraise', 'Partie croustillante', 'Sauce chocolat'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '35 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '45 DH' }],
@@ -12,6 +13,7 @@ const menu = [
   {
     name: 'Chocolat',
     tone: 'cocoa',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp_Image_2026-11-14_at_17.04.08-removebg-preview-L0fuE46aQQ5oH8NouihJfdHdsCRRyT.png',
     description: 'Cake chocolat, crème vanille, sauce chocolat, partie croustillante et ganache chocolat noir.',
     ingredients: ['Cake chocolat', 'Crème vanille', 'Sauce chocolat', 'Partie croustillante', 'Ganache chocolat noir'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '35 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '45 DH' }],
@@ -19,6 +21,7 @@ const menu = [
   {
     name: 'Pistachio',
     tone: 'pistachio',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp_Image_2026-11-14_at_17.04.09__2_-removebg-preview-XoCfnKX2X17Na053OKngXoguN0SMM4.png',
     description: 'Cake chocolat, crème pistachio, crème chocolat, sauce pistachio, croustillant et pistache.',
     ingredients: ['Cake chocolat', 'Crème pistachio', 'Crème chocolat', 'Sauce pistachio', 'Partie croustillante', 'Et pistach'],
     prices: [{ size: 'Petite taille', detail: '330 ml', price: '40 DH' }, { size: 'Grande taille', detail: 'Boîte grand format', price: '50 DH' }],
@@ -26,6 +29,7 @@ const menu = [
   {
     name: 'Lotus',
     tone: 'lotus',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp_Image_2026-11-14_at_17.04.09-removebg-preview-Q2GYQATD2B7IqxSBQxeJYFcHUVJBl2.png',
     description: 'Un tiramisu aux biscuits Lotus dans l’univers Moody.',
     ingredients: ['Biscuit Lotus'],
     prices: [],
@@ -88,7 +92,7 @@ export function MoodyLanding() {
         <div className="section-head"><div><p className="eyebrow">LA CARTE MOODY</p><h2>Choisissez votre <em>mood.</em></h2></div><p>Des couches de gourmandise<br />à savourer jusqu&apos;à la dernière cuillère.</p></div>
         <div className="menu-list">
           {menu.map((item, index) => <article className={`menu-card ${item.tone}`} key={item.name}>
-            <div className="menu-photo" aria-hidden="true"><span className="photo-index">0{index + 1} / 0{menu.length}</span></div>
+            <div className="menu-photo"><Image src={item.image} alt={`Pot dessert Moody ${item.name}`} fill sizes="(max-width: 760px) 90vw, 38vw" className="menu-photo-image" /><span className="photo-index">0{index + 1} / 0{menu.length}</span></div>
             <div className="menu-info"><div className="menu-title-row"><span className="flavor-mark" aria-hidden="true">✳</span><h3>{item.name}</h3></div><p className="menu-description">{item.description}</p>{item.ingredients.length > 0 && <div className="ingredients"><h4>Dans chaque pot</h4><ul>{item.ingredients.map((ingredient) => <li key={ingredient}>{ingredient}</li>)}</ul></div>}{item.prices.length > 0 && <div className="prices">{item.prices.map((option) => <div className="price" key={option.size}><span>{option.size}</span><small>{option.detail}</small><strong>{option.price}</strong></div>)}</div>}</div>
           </article>)}
         </div>
