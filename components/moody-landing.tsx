@@ -32,7 +32,7 @@ const menu = [
     description: 'Un tiramisu aux biscuits Lotus dans l’univers Moody.',
     ingredients: ['Biscuit Lotus'],
     prices: [],
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2016.49.20-q4WHD76aa3G7lWheNVoyoA96GqJrNm.jpeg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1794671692165-1vRD9W7KReoxeRNiemn50iqhB5yhGI.jpg',
   },
 ]
 
