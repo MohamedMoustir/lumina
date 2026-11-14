@@ -36,14 +36,17 @@ const tiramisus = [
   {
     name: 'Tiramisu Noisette',
     price: '30 DH',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%285%29-STPmtxtQd77rHzQfEefweRwYNzO9uo.jpeg',
   },
   {
     name: 'Tiramisu Chocolat',
     price: '30 DH',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.06-mwQwe0EC0tbWq4QPCSYs8XnZ4UXwMm.jpeg',
   },
   {
     name: 'Tiramisu Classique',
     price: '25 DH',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-13%20at%2015.32.05%20%284%29-OgKfr0waix9KpViS3CBI5Svp7EK2Rt.jpeg',
   },
 ]
 
@@ -92,7 +95,7 @@ export function MoodyLanding() {
         <figure className="flavor-pair"><div className="flavor-pair-image" aria-hidden="true" /><figcaption><span>DOUX DUO</span><strong>Chocolat & pistachio</strong><small>Deux canettes, deux moods à découvrir.</small></figcaption></figure>
         <section className="tiramisu-collection" aria-labelledby="tiramisu-title">
           <div className="collection-heading"><div><p className="eyebrow">TIRAMISU & MORE</p><h3 id="tiramisu-title">À partager <em>ou pas.</em></h3></div><p>Nos tiramisus, chacun sa petite douceur.</p></div>
-          <div className="tiramisu-grid">{tiramisus.map((item) => <article className="tiramisu-card" key={item.name}><div className="tiramisu-photo" aria-hidden="true" /><div className="tiramisu-card-footer"><h4>{item.name}</h4><strong className="tiramisu-price">{item.price}</strong></div></article>)}</div>
+          <div className="tiramisu-grid">{tiramisus.map((item) => <article className="tiramisu-card" key={item.name}><div className="tiramisu-photo"><Image src={item.image} alt={`${item.name} Moody, dessert en boîte`} fill sizes="(max-width: 760px) 45vw, 30vw" /></div><div className="tiramisu-card-footer"><h4>{item.name}</h4><strong className="tiramisu-price">{item.price}</strong></div></article>)}</div>
         </section>
         <p className="menu-footnote">Une question sur la carte ? <a href={whatsapp} target="_blank" rel="noreferrer">Contactez-nous sur WhatsApp <ArrowUpRight size={13} /></a></p>
       </section>
